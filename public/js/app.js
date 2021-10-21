@@ -4,6 +4,7 @@ const input = document.querySelector('input')
 let p1 = document.getElementById('p1')
 let p2 = document.getElementById('p2')
 
+console.log(p1);
 console.log(weatherForm);
 
 
