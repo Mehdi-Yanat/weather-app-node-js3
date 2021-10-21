@@ -7,14 +7,13 @@ let p2 = document.getElementById('p2')
 console.log(p1);
 console.log(weatherForm);
 
-
 weatherForm.addEventListener('submit' , (event) => {
      event.preventDefault()
      let location = input.value
      p1.innerText = "Loading...."
      p2.innerText = ""
 
-     fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+     fetch(`/weather?address=${location}`).then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     p1.textContent = "Not Found"

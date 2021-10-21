@@ -7,6 +7,7 @@ const forecast = require('./forecast')
 const geocode = require('./geocode')
 const { error } = require('console');
 
+const port = process.env.PORT || 3000
 
 
 // define path
@@ -95,6 +96,6 @@ app.get('*' , (req ,res ) => {
     res.send('my 404 page')
 })
 
-app.listen(3000 , () => {
-    console.log("port 3000 started");
+app.listen(port , () => {
+    console.log(port + " started");
 })
